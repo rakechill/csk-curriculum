@@ -1,33 +1,22 @@
 import random
-import sys
-import time
 from art import *
 
 header = text2art("Go Bears!")
 print(header)
 
-# need to fully understand that code so as not to confuse people
-typing_speed = 70
-def slow_type(msg):
-	for letter in msg:
-		sys.stdout.write(letter)
-		sys.stdout.flush()
-		time.sleep(random.random()*10.0/typing_speed)
-	print('')
-
 ###########
 # ~ Intro ~
-slow_type("Hello there! Before we embark on this Cal adventure, what is your name?")
+print("Hello there! Before we embark on this Cal adventure, what is your name?")
 name = input()
 
-slow_type("Congratulations, " + name + ". You are going to be a student at the world's number one public university! Woohoo! \
+print("Congratulations, " + name + ". You are going to be a student at the world's number one public university! Woohoo! \
 This definitely calls for a Go Bears! Your first decision as a fresh new Cal Bear is to pick your top 3 \
 dorms to live in. What shall it be? The ever lush Clark Kerr Campus? Or Unit 1 the #1? Or perhaps Berkeley's \
 newest dorm, Blackwell? Choose wisely!\n")
 
 dorms = ["Unit 1", "Unit 2", "Unit 3", "Stern", "Foothill", "Bowles", "Clark Kerr", "Blackwell"]
 
-slow_type("For the following choices, use the corresponding number for each dorm.")
+print("For the following choices, use the corresponding number for each dorm.")
 print()
 
 for ind in range(8):
@@ -56,7 +45,7 @@ else:
 	dorm = random.choice(rest)
 
 
-slow_type("Your assignment has been chosen! " + str(dorms[dorm-1]) + " will be your dorm for the year! \n")
+print("Your assignment has been chosen! " + str(dorms[dorm-1]) + " will be your dorm for the year! \n")
 
 print("<><><><><><><><><><><><>")
 
@@ -64,10 +53,10 @@ print("<><><><><><><><><><><><>")
 # Choosing your roommate
 # One of two friends or random choice between five other people.
 def print_bio(roommate):
-	slow_type("Name: " + roommate[0])
-	slow_type("How you know them: " + roommate[1])
-	slow_type("Fun fact: " + roommate[2])
-	slow_type("Not so fun fact: " + roommate[3] + "\n")
+	print("Name: " + roommate[0])
+	print("How you know them: " + roommate[1])
+	print("Fun fact: " + roommate[2])
+	print("Not so fun fact: " + roommate[3] + "\n")
 
 # people you know
 amy = ["Amy", "You have been family friends since you were 3", "She can sing really well and is always down for dance parties.", "You haven’t kept in touch that much over the years, so you’re not sure what she would be like as a roommate."]
@@ -82,7 +71,7 @@ becky = ["Becky", "Random roommate", "She is superrrr clean and doesn't care if 
 
 randoms = [carol, cassandra, hannah, sharon, becky]
 
-slow_type("Now it's time to choose your roommate! To go random or not to go random...that is the question. You have two people you know: \n")
+print("Now it's time to choose your roommate! To go random or not to go random...that is the question. You have two people you know: \n")
 print_bio(amy)
 print_bio(michelle)
 
@@ -105,30 +94,30 @@ print("<><><><><><><><><><><><>")
 ################
 # Making Friends
 
-slow_type("Making friends is a really important (and fun!) part of college! You've just moved in and you see some people hanging out in the lounge in your dorm.")
+print("Making friends is a really important (and fun!) part of college! You've just moved in and you see some people hanging out in the lounge in your dorm.")
 talk = input("Do you wanna go talk to them ? y/n ").strip().lower()
 if talk == 'y':
-	slow_type("Congrats! You just made some friends! They're all really excited to meet someone new, too!")
+	print("Congrats! You just made some friends! They're all really excited to meet someone new, too!")
 	dinner = int((input("It's getting close to dinnertime and everyone's kinda hungry. Do you wanna go to Croads or Asian Ghetto? Type 1 for Croads or 2 for Asian Ghetto: ")).strip())
 	if dinner == 1:
-		slow_type("\n You go to Croads, and all had a grand time eating copious amounts of kind of good food! Definitely the beginning of a great friendship.\n")
+		print("\n You go to Croads, and all had a grand time eating copious amounts of kind of good food! Definitely the beginning of a great friendship.\n")
 	else:
-		slow_type("\n You go to Asian Ghetto, but what to eat?? You really can't go wrong with great classics like Gypsy's, Thai Basil, Mandarin House, Bear Ramen House, and Boba Ninja! So just go with your gut and who knows, maybe you'll find your ~favorite~ place in Berkeley.\n")
+		print("\n You go to Asian Ghetto, but what to eat?? You really can't go wrong with great classics like Gypsy's, Thai Basil, Mandarin House, Bear Ramen House, and Boba Ninja! So just go with your gut and who knows, maybe you'll find your ~favorite~ place in Berkeley.\n")
 else:
-	slow_type("\n Talking to people can be hard, but just remember that everyone else is new to Berkeley and nervous, too. Don't worry, there will be plenty of other opportunities to meet people! Go ahead and continue binging your favorite Netflix show and order takeout. No judgement.\n ")
+	print("\n Talking to people can be hard, but just remember that everyone else is new to Berkeley and nervous, too. Don't worry, there will be plenty of other opportunities to meet people! Go ahead and continue binging your favorite Netflix show and order takeout. No judgement.\n ")
 
 print("<><><><><><><><><><><><>")
 
 ###############
 # Joining clubs
 
-slow_type("Calapalooza is today and you have no idea what to join?!? There are so many clubs on campus from singing groups to service clubs to professional clubs. How are there so many business clubs?? Why do they have applications? Nothing makes sense :( \n")
-slow_type("Okay, breathe. There are a ton of awesome clubs to join and also 8 whole semesters for you to join them. Just take flyers from things that interest you and don't let it get you down if you don't get into one of them. Try to choose some that have applications, and some that don't! \n")
+print("Calapalooza is today and you have no idea what to join?!? There are so many clubs on campus from singing groups to service clubs to professional clubs. How are there so many business clubs?? Why do they have applications? Nothing makes sense :( \n")
+print("Okay, breathe. There are a ton of awesome clubs to join and also 8 whole semesters for you to join them. Just take flyers from things that interest you and don't let it get you down if you don't get into one of them. Try to choose some that have applications, and some that don't! \n")
 
 clubs_w_apps = ["Berkeley Forum", "Drawn to Scale Acappella", "Mobile Developers at Berkeley", "Cal Dragon Boat", "AFX"]
 clubs_wo_apps = ["Songwriting at Berkeley", "Association of Women in EECS (AWE)", "Open Computing Facility (OCF)", "Society of Women Engineers (SWE)", "Salsa at Cal"]
 
-slow_type("\nFor the following choices, use the corresponding number for each club. \n")
+print("\nFor the following choices, use the corresponding number for each club. \n")
 
 for club in range(len(clubs_w_apps)):
 	print(str(clubs_w_apps[club]) + " - " + str(club+1))
