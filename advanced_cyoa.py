@@ -123,10 +123,10 @@ time.sleep(4)
 print_bio(amy)
 print_bio(michelle)
 
+# good examples for improving input error checking using .strip() and .lower() so that every answer will be of the same format.
 choice = (input("Type Amy or Michelle if you want to room with them, or type random to be randomly assigned a roommate: ")).strip().lower()
 print()
 
-# good examples for improving input error checking using .strip() and .lower() so that every answer will be of the same format.
 if choice in ["amy", "am", "a", "ammy"]:
  	print("Congrats, your roommate is Amy!")
  	your_roommate = amy
